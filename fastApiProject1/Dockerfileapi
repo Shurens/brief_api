@@ -1,0 +1,17 @@
+#Dockerfileapi
+FROM python:3.8-slim
+
+ENV MONGO_DB_USERNAME=root\
+    MONGO_DB__PWD=example
+
+WORKDIR /server
+
+COPY server/requirements.txt /server/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 8002
+
+VOLUME [ "/server" ]
+
+CMD ["uvicorn", "crudAPI:app", "--host", "0.0.0.0", "--port", "8002"]

@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+folium
+pymongo
+fastapi
+motor
+pydantic
+requests
+uvicorn
+streamlit_folium
